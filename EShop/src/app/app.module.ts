@@ -14,6 +14,8 @@ import { TriangleComponent } from './triangle/triangle.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { CitiesComponent } from './cities/cities.component';
 import { CourseComponent } from './course/course.component';
+import { PromiseService } from './services/promise.service';
+import { PromisesComponent } from './promises/promises.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { CourseComponent } from './course/course.component';
     TriangleComponent,
     DoctorComponent,
     CitiesComponent,
-    CourseComponent
+    CourseComponent,
+    PromisesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { CourseComponent } from './course/course.component';
   ],
   providers: [
     calculatorService,
-    triangleService
+    triangleService,
+    PromiseService
   ],
   bootstrap: [AppComponent]
 })
