@@ -1,3 +1,5 @@
+import { searchService } from './services/search.service';
+import { ObservableService } from './services/observable.service';
 import { triangleService } from './services/triangle.service';
 import { calculatorService } from './services/calculator.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +18,9 @@ import { CitiesComponent } from './cities/cities.component';
 import { CourseComponent } from './course/course.component';
 import { PromiseService } from './services/promise.service';
 import { PromisesComponent } from './promises/promises.component';
+import { HttpModule } from '@angular/http';
+import { ObservablesComponent } from './observables/observables.component';
+import { ItuneComponent } from './itune/itune.component';
 
 @NgModule({
   declarations: [
@@ -28,16 +33,21 @@ import { PromisesComponent } from './promises/promises.component';
     DoctorComponent,
     CitiesComponent,
     CourseComponent,
-    PromisesComponent
+    PromisesComponent,
+    ObservablesComponent,
+    ItuneComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     calculatorService,
     triangleService,
-    PromiseService
+    PromiseService,
+    ObservableService,
+    searchService
   ],
   bootstrap: [AppComponent]
 })
