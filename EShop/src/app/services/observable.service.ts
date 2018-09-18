@@ -20,4 +20,11 @@ export class ObservableService{
             }, 10000)
         })
     }
+
+
+    // Pulling data from API using observable
+    getData(){
+        
+    }
+
 }

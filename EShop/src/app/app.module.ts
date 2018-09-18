@@ -21,6 +21,9 @@ import { PromisesComponent } from './promises/promises.component';
 import { HttpModule } from '@angular/http';
 import { ObservablesComponent } from './observables/observables.component';
 import { ItuneComponent } from './itune/itune.component';
+import { Observable2Component } from './observable2/observable2.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ItuneComponent } from './itune/itune.component';
     CourseComponent,
     PromisesComponent,
     ObservablesComponent,
-    ItuneComponent
+    ItuneComponent,
+    Observable2Component,
+    TemplateDrivenFormComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
