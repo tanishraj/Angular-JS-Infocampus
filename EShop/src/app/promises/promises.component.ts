@@ -12,6 +12,7 @@ export class PromisesComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		// Get all the list of users
 		this.promiseService.getUsers();
 
 		let result = this.promiseService.add(2, 3).then(function (res) {
