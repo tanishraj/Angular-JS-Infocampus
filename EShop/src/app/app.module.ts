@@ -1,3 +1,4 @@
+import { DoublePipe } from './pipe/double.pipe';
 import { searchService } from './services/search.service';
 import { ObservableService } from './services/observable.service';
 import { triangleService } from './services/triangle.service';
@@ -24,6 +25,8 @@ import { ItuneComponent } from './itune/itune.component';
 import { Observable2Component } from './observable2/observable2.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ItuneComponent,
     Observable2Component,
     TemplateDrivenFormComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    DynamicFormComponent,
+    PipesComponent,
+    DoublePipe
   ],
   imports: [
     BrowserModule,
