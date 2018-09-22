@@ -6,14 +6,25 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./template-driven-form.component.scss']
 })
 export class TemplateDrivenFormComponent implements OnInit {
-  @ViewChild('f') frm;
+  @ViewChild('frm') frm;
+  
+  FormData:Object;
+  displayData:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   displayRecords(){
-    console.log("Form values are", this.frm.value);
+    console.log("Form Values are: ", this.frm.value);
+    this.FormData = this.frm.value;
+    this.displayData = true;
+  }
+
+  reset(){
+    this.frm.reset();
+    this.displayData = false;
   }
 
 }

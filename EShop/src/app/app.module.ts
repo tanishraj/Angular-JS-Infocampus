@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { AdditionComponent } from './addition/addition.component';
 import { AverageMarksComponent } from './average-marks/average-marks.component';
 
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CircleComponent } from './circle/circle.component';
 import { MycalculatorComponent } from './mycalculator/mycalculator.component';
 import { TriangleComponent } from './triangle/triangle.component';
@@ -46,7 +46,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [
     calculatorService,
