@@ -24,11 +24,11 @@
 			</div>
 
 			<div class="mt-5" formArrayName="patients">
-					<button class="btn btn-success" (click)="addPatient()">Add Patient</button>
+					<button class="btn btn-success" (click)="addPatient()">Add Patient <span class="fa fa-user-plus"></span></button>
 		
 					<div *ngFor="let x of frm.get('patients').controls; let i = index">
 						<div class="card card-default mt-3" [formGroupName]="i">
-							<div class="card-header bg-primary text-white">Patient {{i+1}} <span class="fa fa-trash"></span></div>
+							<div class="card-header bg-primary text-white">Patient {{i+1}} <span class="fa fa-trash float-right" (click)="deletePatient(i)"></span></div>
 							<div class="card-body">
 								<div class="form-group">
 									<label for="name">Patient Name:</label>

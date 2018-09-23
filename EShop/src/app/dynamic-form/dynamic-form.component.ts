@@ -32,4 +32,9 @@ export class DynamicFormComponent implements OnInit {
 		controls.push(this.createPatientForm());
 	}
 
+	deletePatient(index){
+		var controls = this.frm.get('patients') as FormArray;
+		controls.removeAt(index);
+	}
+
 }
