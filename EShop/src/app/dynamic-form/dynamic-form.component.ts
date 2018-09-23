@@ -33,8 +33,10 @@ export class DynamicFormComponent implements OnInit {
 	}
 
 	deletePatient(index){
-		var controls = this.frm.get('patients') as FormArray;
-		controls.removeAt(index);
+		if(index>1){
+			var controls = this.frm.get('patients') as FormArray;
+			controls.removeAt(index);
+		}
 	}
 
 }
