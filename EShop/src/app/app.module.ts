@@ -32,6 +32,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RoutingComponent } from './routing/routing.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
 	declarations: [
@@ -56,7 +57,8 @@ import { RoutingComponent } from './routing/routing.component';
 		HomeComponent,
 		AboutComponent,
 		ContactComponent,
-		RoutingComponent
+		RoutingComponent,
+		LoginComponent
 	],
 	imports: [
 		BrowserModule,
@@ -66,7 +68,8 @@ import { RoutingComponent } from './routing/routing.component';
 		RouterModule.forRoot([
 			{path: '', component: HomeComponent},
 			{path: 'About', component: AboutComponent},
-			{path: 'Contact', component: ContactComponent}
+			{path: 'Contact', component: ContactComponent},
+			{path: 'Login', component: LoginComponent}
 		])
 	],
 	providers: [

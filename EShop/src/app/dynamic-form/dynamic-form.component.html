@@ -3,8 +3,8 @@
 		<h1 class="text-center mb-2">Dynamic Forms</h1>
 		<form class="form" [formGroup]="frm">
 			<div class="form-group">
-				<label for="name">Name:</label>
-				<input type="text" id="name" formControlName="name" class="form-control" name="name" />
+				<label for="doctorName">Name:</label>
+				<input type="text" id="doctorName" formControlName="name" class="form-control" name="name" />
 				<div class="text-danger" *ngIf="frm.get('name').errors && frm.get('name').dirty">
 					<span *ngIf="frm.get('name').errors['required']">Name is required.</span>
 					<span *ngIf="frm.get('name').errors['minlength']">Name should have minimum 3 characters.</span>
@@ -12,8 +12,8 @@
 			</div>
 
 			<div class="form-group">
-				<label for="desc">Description:</label>
-				<textarea id="desc" class="form-control" formControlName="description" name="description"></textarea>
+				<label for="doctorDesc">Description:</label>
+				<textarea id="doctorDesc" class="form-control" formControlName="description" name="description"></textarea>
 				<div class="text-danger" *ngIf="frm.get('description').errors && frm.get('description').dirty">
 					<span *ngIf="frm.get('description').errors['required']">Description is required.</span>
 				</div>
@@ -31,13 +31,13 @@
 							<div class="card-header bg-primary text-white">Patient {{i+1}} <span class="fa fa-trash float-right" (click)="deletePatient(i)"></span></div>
 							<div class="card-body">
 								<div class="form-group">
-									<label for="name">Patient Name:</label>
-									<input type="text" id="name" formControlName="patientName" class="form-control" />
+									<label for="patientName">Patient Name:</label>
+									<input type="text" id="patientName" formControlName="patientName" class="form-control" />
 								</div>
 		
 								<div class="form-group">
-									<label for="name">Patient Disease:</label>
-									<input type="text" id="name" formControlName="patientDisease" class="form-control" />
+									<label for="patientDisease">Patient Disease:</label>
+									<input type="text" id="patientDisease" formControlName="patientDisease" class="form-control" />
 								</div>
 							</div>
 						</div>

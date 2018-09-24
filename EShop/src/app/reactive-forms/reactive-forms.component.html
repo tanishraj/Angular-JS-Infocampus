@@ -3,8 +3,8 @@
 		<h1 class="text-center mb-2">Reactive Forms</h1>
 		<form class="form" [formGroup]="frm">
 			<div class="form-group">
-				<label for="name">Name:</label>
-				<input type="text" formControlName="name" id="name" class="form-control" name="name" />
+				<label for="reactiveName">Name:</label>
+				<input type="text" formControlName="name" id="reactiveName" class="form-control" name="name" />
 				<div class="text-danger" *ngIf="frm.get('name').errors && frm.get('name').dirty">
 					<span class="d-block" *ngIf="frm.get('name').errors.required">Name is required.</span>
 					<span class="d-block" *ngIf="frm.get('name').errors.minlength">Minimum 3 characters required.</span>
@@ -14,8 +14,8 @@
 			</div>
 
 			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" formControlName="email" id="email" class="form-control" name="email" />
+				<label for="reactiveEmail">Email:</label>
+				<input type="email" formControlName="email" id="reactiveEmail" class="form-control" name="email" />
 				<div class="text-danger" *ngIf="frm.get('email').errors && frm.get('email').dirty">
 						<span class="d-block" *ngIf="frm.get('email').errors.required">Email is required.</span>
 						<span class="d-block" *ngIf="frm.get('email').errors.minlength">Minimum 3 characters required.</span>
