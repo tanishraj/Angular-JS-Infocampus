@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { AdditionComponent } from './addition/addition.component';
 import { AverageMarksComponent } from './average-marks/average-marks.component';
 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { CircleComponent } from './circle/circle.component';
 import { MycalculatorComponent } from './mycalculator/mycalculator.component';
 import { TriangleComponent } from './triangle/triangle.component';
@@ -27,41 +28,54 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { RoutingComponent } from './routing/routing.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AdditionComponent,
-    AverageMarksComponent,
-    CircleComponent,
-    MycalculatorComponent,
-    TriangleComponent,
-    DoctorComponent,
-    CitiesComponent,
-    CourseComponent,
-    PromisesComponent,
-    ObservablesComponent,
-    ItuneComponent,
-    Observable2Component,
-    TemplateDrivenFormComponent,
-    ReactiveFormsComponent,
-    DynamicFormComponent,
-    PipesComponent,
-    DoublePipe
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    calculatorService,
-    triangleService,
-    PromiseService,
-    ObservableService,
-    searchService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		AdditionComponent,
+		AverageMarksComponent,
+		CircleComponent,
+		MycalculatorComponent,
+		TriangleComponent,
+		DoctorComponent,
+		CitiesComponent,
+		CourseComponent,
+		PromisesComponent,
+		ObservablesComponent,
+		ItuneComponent,
+		Observable2Component,
+		TemplateDrivenFormComponent,
+		ReactiveFormsComponent,
+		DynamicFormComponent,
+		PipesComponent,
+		DoublePipe,
+		HomeComponent,
+		AboutComponent,
+		ContactComponent,
+		RoutingComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		HttpModule,
+		ReactiveFormsModule,
+		RouterModule.forRoot([
+			{path: '', component: HomeComponent},
+			{path: 'About', component: AboutComponent},
+			{path: 'Contact', component: ContactComponent}
+		])
+	],
+	providers: [
+		calculatorService,
+		triangleService,
+		PromiseService,
+		ObservableService,
+		searchService
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
