@@ -15,8 +15,11 @@ export class ItuneComponent implements OnInit {
 	}
 
 	doSearch(term: string) {
-		this.loading = true;
-		this.searchService.searchItuneAPI(term);
+		if(term != null){
+			this.loading = true;
+			this.searchService.searchItuneAPI(term);
+		} else{
+			console.log("You should provide some hint in the textbox.");
+		}
 	}
-
 }

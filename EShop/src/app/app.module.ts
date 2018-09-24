@@ -69,7 +69,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 			{path: '', component: HomeComponent},
 			{path: 'About', component: AboutComponent},
 			{path: 'Contact', component: ContactComponent},
-			{path: 'Login', component: LoginComponent},
+			{path: 'Login/:val', component: LoginComponent},
 			{path: 'Welcome', component: WelcomeComponent}
 		])
 	],

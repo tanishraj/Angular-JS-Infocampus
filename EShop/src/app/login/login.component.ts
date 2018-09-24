@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-login',
@@ -8,11 +8,25 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-	private user: any = {};
+	private user: any = {
+		name: 'tanishraj.47@gmail.com',
+		password: '12345'
+	};
 
-	constructor(private router: Router) { }
+	constructor(private router: Router, private x: ActivatedRoute) { }
 
 	ngOnInit() {
+		this.x.params.subscribe(
+		(res) => {
+			console.log("Parameter passed through ActivatedURL is : ", res['val']);
+		},
+		(err) => {
+			console.log("Something went wrong.");
+		},
+		() => {
+			console.log("Process completed.")
+		}
+		)
 	}
 
 	checkLogin() {
