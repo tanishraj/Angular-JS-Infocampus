@@ -33,6 +33,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RoutingComponent } from './routing/routing.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CompanyDynamicFormComponent } from './company-dynamic-form/company-dynamic-form.component';
 
 @NgModule({
 	declarations: [
@@ -58,7 +59,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 		ContactComponent,
 		RoutingComponent,
 		LoginComponent,
-		WelcomeComponent
+		WelcomeComponent,
+		CompanyDynamicFormComponent
 	],
 	imports: [
 		BrowserModule,
