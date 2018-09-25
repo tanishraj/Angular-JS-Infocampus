@@ -1,3 +1,4 @@
+import { ArrayLimit } from './pipe/arrayLimit.pipe';
 import { PePipe } from './pipe/pe.pipe';
 import { DoublePipe } from './pipe/double.pipe';
 import { searchService } from './services/search.service';
@@ -36,6 +37,8 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CompanyDynamicFormComponent } from './company-dynamic-form/company-dynamic-form.component';
 import { PePipesComponent } from './pe-pipes/pe-pipes.component';
+import { ArrayPipeComponent } from './array-pipe/array-pipe.component';
+import { ObservablePostsComponent } from './observable-posts/observable-posts.component';
 
 @NgModule({
 	declarations: [
@@ -64,7 +67,10 @@ import { PePipesComponent } from './pe-pipes/pe-pipes.component';
 		WelcomeComponent,
 		CompanyDynamicFormComponent,
 		PePipesComponent,
-		PePipe
+		PePipe,
+		ArrayPipeComponent,
+		ArrayLimit,
+		ObservablePostsComponent
 	],
 	imports: [
 		BrowserModule,
