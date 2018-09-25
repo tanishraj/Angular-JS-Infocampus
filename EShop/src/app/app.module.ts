@@ -1,3 +1,4 @@
+import { PePipe } from './pipe/pe.pipe';
 import { DoublePipe } from './pipe/double.pipe';
 import { searchService } from './services/search.service';
 import { ObservableService } from './services/observable.service';
@@ -34,6 +35,7 @@ import { RoutingComponent } from './routing/routing.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CompanyDynamicFormComponent } from './company-dynamic-form/company-dynamic-form.component';
+import { PePipesComponent } from './pe-pipes/pe-pipes.component';
 
 @NgModule({
 	declarations: [
@@ -60,7 +62,9 @@ import { CompanyDynamicFormComponent } from './company-dynamic-form/company-dyna
 		RoutingComponent,
 		LoginComponent,
 		WelcomeComponent,
-		CompanyDynamicFormComponent
+		CompanyDynamicFormComponent,
+		PePipesComponent,
+		PePipe
 	],
 	imports: [
 		BrowserModule,
