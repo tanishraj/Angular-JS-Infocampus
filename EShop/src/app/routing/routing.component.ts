@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoutingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private x: ActivatedRoute) { }
 
   ngOnInit() {
+    this.x.params.subscribe(
+      (res) => {
+        console.log("The parameter is =" + res['val']);
+      }
+    )
   }
 
 }

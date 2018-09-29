@@ -39,7 +39,6 @@ import { CompanyDynamicFormComponent } from './company-dynamic-form/company-dyna
 import { PePipesComponent } from './pe-pipes/pe-pipes.component';
 import { ArrayPipeComponent } from './array-pipe/array-pipe.component';
 import { ObservablePostsComponent } from './observable-posts/observable-posts.component';
-import { RoutingPlayersComponent } from './routing-players/routing-players.component';
 import { SachinComponent } from './sachin/sachin.component';
 import { DravidComponent } from './dravid/dravid.component';
 import { AzaharuddinComponent } from './azaharuddin/azaharuddin.component';
@@ -75,7 +74,6 @@ import { AzaharuddinComponent } from './azaharuddin/azaharuddin.component';
 		ArrayPipeComponent,
 		ArrayLimit,
 		ObservablePostsComponent,
-		RoutingPlayersComponent,
 		SachinComponent,
 		DravidComponent,
 		AzaharuddinComponent
@@ -91,11 +89,6 @@ import { AzaharuddinComponent } from './azaharuddin/azaharuddin.component';
 			{path: 'Contact', component: ContactComponent},
 			{path: 'Login/:val', component: LoginComponent},
 			{path: 'Welcome', component: WelcomeComponent},
-
-			//players routing
-			{path: 'Sachin', component: SachinComponent},
-			{path: 'Dravid', component: DravidComponent},
-			{path: 'Azaharuddin', component: AzaharuddinComponent}
 		])
 	],
 	providers: [
