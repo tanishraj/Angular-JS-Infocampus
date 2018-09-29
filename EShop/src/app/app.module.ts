@@ -39,9 +39,6 @@ import { CompanyDynamicFormComponent } from './company-dynamic-form/company-dyna
 import { PePipesComponent } from './pe-pipes/pe-pipes.component';
 import { ArrayPipeComponent } from './array-pipe/array-pipe.component';
 import { ObservablePostsComponent } from './observable-posts/observable-posts.component';
-import { SachinComponent } from './sachin/sachin.component';
-import { DravidComponent } from './dravid/dravid.component';
-import { AzaharuddinComponent } from './azaharuddin/azaharuddin.component';
 
 @NgModule({
 	declarations: [
@@ -74,9 +71,6 @@ import { AzaharuddinComponent } from './azaharuddin/azaharuddin.component';
 		ArrayPipeComponent,
 		ArrayLimit,
 		ObservablePostsComponent,
-		SachinComponent,
-		DravidComponent,
-		AzaharuddinComponent
 	],
 	imports: [
 		BrowserModule,
