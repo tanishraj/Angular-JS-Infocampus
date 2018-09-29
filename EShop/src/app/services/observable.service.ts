@@ -1,6 +1,14 @@
+import { Http } from '@angular/http';
 import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+
+@Injectable()
 
 export class ObservableService{
+
+    constructor(private http: Http) {}
+
+    //Manual serve delay reponse has been implemented through setTimeOut() functiokn
     getRecords(){
         return new Observable((observer) => {
             setTimeout(function(){
@@ -23,8 +31,8 @@ export class ObservableService{
 
 
     // Pulling data from API using observable
-    getData(){
-        
+    fetchUsersFromAPI(){
+        return this.http.get('https://jsonplaceholder.typicode.com/users');
     }
 
 }
