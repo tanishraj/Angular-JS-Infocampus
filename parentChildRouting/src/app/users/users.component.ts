@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
 
   private users:any[] = [];
+  private errorMessage: string = "";
 
   constructor(private usersService : UsersService) { }
 
@@ -19,6 +20,7 @@ export class UsersComponent implements OnInit {
       },
       (err) => {
         console.log("Something went wrong: " + err);
+        this.errorMessage = "Something went wrong while pulling the API.";
       },
       () => {
         console.log("Everythign processed.");

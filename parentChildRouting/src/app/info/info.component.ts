@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class InfoComponent implements OnInit {
 
 	private userInfo : object = {};
+	private errorMessage : string = "";
 
 	constructor(private http: Http, private paramService: ActivatedRoute) { }
 
@@ -22,6 +23,7 @@ export class InfoComponent implements OnInit {
 					},
 					(err) => {
 						console.log("Something went wrong: ", err);
+						this.errorMessage = "Something went wrong while pulling the API.";
 					},
 					() => {
 						console.log("Everything is completed so far.");

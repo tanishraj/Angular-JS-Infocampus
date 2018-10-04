@@ -5,6 +5,7 @@
 	</li>
 </ul>
 <div class="col-sm-6">
-<router-outlet></router-outlet>
+	<p *ngIf="errorMessage.length>0">{{errorMessage}}</p>
+	<router-outlet></router-outlet>
 </div>
 </div>
