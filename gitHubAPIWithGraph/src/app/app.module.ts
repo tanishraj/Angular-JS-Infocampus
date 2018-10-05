@@ -1,3 +1,4 @@
+import { ChartsModule } from 'ng2-charts';
 import { HttpModule } from '@angular/http';
 import { SearchService } from './services/search.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,7 +17,8 @@ import { UsersComponent } from './users/users.component';
 		BrowserModule,
 		FormsModule,
 		ReactiveFormsModule,
-		HttpModule
+		HttpModule,
+		ChartsModule
 	],
 	providers: [
 		SearchService

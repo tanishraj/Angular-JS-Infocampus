@@ -14,17 +14,30 @@
 			</div>
 		</form>
 
-		<div class="card" style="width: 18rem;" *ngIf="searchService.result != null">
-			<img class="card-img-top" src="{{searchService.result.avatar_url}}" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">{{searchService.result.login | titlecase}}</h5>
-				<p class="card-text">{{searchService.result.company}}</p>
+		<div class="row">
+			<div class="card col-sm-4" *ngIf="searchService.result != null">
+				<img class="card-img-top" src="{{searchService.result.avatar_url}}" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">{{searchService.result.login | titlecase}}</h5>
+					<p class="card-text">{{searchService.result.company}}</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Followers: {{searchService.result.followers}}</li>
+				</ul>
+				<div class="card-body">
+					<a href="{{searchService.result.html_url}}" class="card-link" target="_blank">GitHub Link</a>
+				</div>
 			</div>
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Followers: {{searchService.result.followers}}</li>
-			</ul>
-			<div class="card-body">
-				<a href="{{searchService.result.html_url}}" class="card-link" target="_blank">GitHub Link</a>
+
+			<div class="col-sm-8">
+				<canvas 
+					baseChart 
+					[data]="pieChartData" 
+					[labels]="pieChartLabels" 
+					[chartType]="pieChartType" 
+					(chartHover)="chartHovered($event)"
+					(chartClick)="chartClicked($event)">
+				</canvas>
 			</div>
 		</div>
 	</div>

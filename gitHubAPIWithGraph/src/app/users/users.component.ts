@@ -10,9 +10,9 @@ import { SearchService } from '../services/search.service';
 export class UsersComponent implements OnInit {
 
 	private frm: FormGroup;
-	private loading : boolean = false;
+	private loading: boolean = false;
 
-	constructor(private searchService : SearchService) {
+	constructor(private searchService: SearchService) {
 		this.frm = new FormGroup({
 			search: new FormControl(null, [Validators.required, Validators.minLength(3)])
 		})
@@ -21,13 +21,26 @@ export class UsersComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	searchKeyword(keyword : string){
-		if(keyword != null){
+	searchKeyword(keyword: string) {
+		if (keyword != null) {
 			this.loading = true;
 			this.searchService.searchGitUsers(keyword);
-		} else{
+		} else {
 			console.log("you must provide some keyword.");
 		}
+	}
+
+	public pieChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
+	public pieChartData: number[] = [300, 500, 100];
+	public pieChartType: string = 'pie';
+
+	// events
+	public chartClicked(e: any): void {
+		console.log(e);
+	}
+
+	public chartHovered(e: any): void {
+		console.log(e);
 	}
 
 }
