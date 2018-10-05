@@ -14,8 +14,12 @@
 			</div>
 		</form>
 
-		<div class="row">
-			<div class="card col-sm-4" *ngIf="searchService.result != null">
+		<div class="text-danger" *ngIf="searchService.result == null && searchService.errorMsg != null">
+			<span class="d-block">{{searchService.errorMsg}}</span>
+		</div>
+
+		<div class="row pt-3" *ngIf="searchService.result != null">
+			<div class="card col-sm-4">
 				<img class="card-img-top" src="{{searchService.result.avatar_url}}" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">{{searchService.result.login | titlecase}}</h5>
@@ -34,9 +38,7 @@
 					baseChart 
 					[data]="pieChartData" 
 					[labels]="pieChartLabels" 
-					[chartType]="pieChartType" 
-					(chartHover)="chartHovered($event)"
-					(chartClick)="chartClicked($event)">
+					[chartType]="pieChartType">
 				</canvas>
 			</div>
 		</div>

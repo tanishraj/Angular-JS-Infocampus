@@ -11,6 +11,10 @@ export class UsersComponent implements OnInit {
 
 	private frm: FormGroup;
 	private loading: boolean = false;
+	private chartData : object;
+	private pieChartLabels : string [] = [];
+	private pieChartData : number [] = [];
+	private pieChartType : string = "pie";
 
 	constructor(private searchService: SearchService) {
 		this.frm = new FormGroup({
@@ -25,22 +29,24 @@ export class UsersComponent implements OnInit {
 		if (keyword != null) {
 			this.loading = true;
 			this.searchService.searchGitUsers(keyword);
+
+			this.searchService.searchGitUsers(keyword).then(
+				res => {
+					this.chartData = res;
+					this.pieChartLabels = ['Public Repos', 'Followers', 'Following'];
+					this.pieChartData.length = 0;
+					this.pieChartData.push(this.chartData['public_repos']);
+					this.pieChartData.push(this.chartData['followers']);
+					this.pieChartData.push(this.chartData['following']);
+				},
+				err => {
+					console.log("Something went wrong." + err);
+				}
+			);
+
+			
 		} else {
 			console.log("you must provide some keyword.");
 		}
 	}
-
-	public pieChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-	public pieChartData: number[] = [300, 500, 100];
-	public pieChartType: string = 'pie';
-
-	// events
-	public chartClicked(e: any): void {
-		console.log(e);
-	}
-
-	public chartHovered(e: any): void {
-		console.log(e);
-	}
-
 }

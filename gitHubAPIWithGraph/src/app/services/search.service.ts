@@ -8,6 +8,7 @@ export class SearchService{
 	private apiRoot = "https://api.github.com/users/";
 	private result : object;
 	private loading : boolean;
+	private errorMsg : string;
 	
 	constructor(private http : Http) { 
 		this.result = null;
@@ -15,23 +16,23 @@ export class SearchService{
 	}
 
 	searchGitUsers(keyword : string){
-		return new Promise((resolve, reject) => {
+		let promise = new Promise((resolve, reject) => {
 			let apiURL = this.apiRoot + keyword;
 
 			this.http.get(apiURL)
 			.toPromise()
 			.then(
 				(res) => {
-					console.log("Response is ", res.json());
 					this.result = res.json();
-					resolve();
+					resolve(this.result);
 				},
 				(err) => {
-					console.log("git user", err.json().message);
+					this.errorMsg = "gitHub user name " + err.json().message;
 					reject();
 				}
 			)
 		})
-	}
 
+		return promise;
+	}
 }
