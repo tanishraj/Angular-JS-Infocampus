@@ -40,7 +40,7 @@ export class UsersComponent implements OnInit {
 					this.pieChartData.push(this.chartData['following']);
 				},
 				err => {
-					console.log("Something went wrong." + err);
+					console.log("Something went wrong.", err);
 				}
 			);
 

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PePipesComponent implements OnInit {
 
-  private mass: number = 12;
+  private mass: number = 120;
   private height: number = 10;
 
   constructor() { }
