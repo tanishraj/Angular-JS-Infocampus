@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MatEx';
+  
+  checked = false;
+  indeterminate = false;
+  labelPosition = 'after';
+  disabled = false;
 }
